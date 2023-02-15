@@ -8,7 +8,7 @@ const getApiInfo = async () => {
     const apiUrl = await axios({
       method: "get",
       url: `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=10`, // `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100` // "https://run.mocky.io/v3/84b3f19c-7642-4552-b69c-c53742badee5" API
-      headers: { "Accept-Encoding": "null" },  // que es esto ? ? 
+      headers: { "Accept-Encoding": "null" }, 
     });
 
     const apiInfo = await apiUrl.data.results?.map((e) => {
